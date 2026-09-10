@@ -1,0 +1,34 @@
+name: Feature request
+description: Suggest an improvement to Prompt Queue
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or workflow
+      description: What workflow would this feature improve?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: Describe what you would like Prompt Queue to do.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Optional. Describe any simpler alternatives or workarounds.
+
+  - type: checkboxes
+    id: principles
+    attributes:
+      label: Design fit
+      options:
+        - label: This feature can remain local-first and does not require analytics or telemetry.
+        - label: This feature does not require interrupting ChatGPT's current response to implement pause/stop behavior.

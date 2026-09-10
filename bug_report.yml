@@ -1,0 +1,97 @@
+name: Bug report
+description: Report a reproducible problem with Prompt Queue
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Do not paste private prompts, cookies, tokens, or account information.
+
+  - type: input
+    id: version
+    attributes:
+      label: Prompt Queue version
+      placeholder: "1.0.1"
+    validations:
+      required: true
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and version
+      placeholder: "Chrome 140"
+    validations:
+      required: true
+
+  - type: input
+    id: tampermonkey
+    attributes:
+      label: Tampermonkey version
+    validations:
+      required: true
+
+  - type: input
+    id: language
+    attributes:
+      label: ChatGPT interface language
+      placeholder: "English / Spanish / ..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      options:
+        - Sending prompts
+        - Response completion detection
+        - Queue state / pause / stop
+        - Drag and drop
+        - Panel / typing / focus
+        - Persistence
+        - Completion sound
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Use non-sensitive example prompts.
+      placeholder: |
+        1. Add two test prompts
+        2. Click Start
+        3. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: console
+    attributes:
+      label: Relevant console output
+      description: Paste only messages relevant to Prompt Queue and remove sensitive information.
+      render: shell
+
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Privacy check
+      options:
+        - label: I removed private conversations, credentials, tokens, and personal information from this report.
+          required: true
